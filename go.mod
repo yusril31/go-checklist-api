@@ -1,4 +1,4 @@
-module golang-gorm
+module go-checklist-api
 
 go 1.23.5
 

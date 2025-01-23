@@ -1,8 +1,9 @@
 package main
 
 import (
-	"golang-gorm/controllers/checklistcontroller"
-	"golang-gorm/models"
+	"go-checklist-api/controllers/checklistcontroller"
+	"go-checklist-api/controllers/checklistitemcontroller"
+	"go-checklist-api/models"
 
 	"github.com/gin-gonic/gin"
 )
@@ -17,7 +18,7 @@ func main() {
 	r.PUT("/api/checklist/:id", checklistcontroller.UpdateChecklist)
 	r.DELETE("/api/checklist/:id", checklistcontroller.DeleteChecklist)
 
-	r.GET("/api/checklist/:id/item", checklistcontroller.GetItems)
+	r.GET("/api/checklist/:id/item", checklistitemcontroller.GetItems)
 
 	r.Run()
 }
